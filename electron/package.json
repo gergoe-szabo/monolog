@@ -1,0 +1,43 @@
+{
+  "name": "monolog",
+  "version": "1.0.0",
+  "description": "monoLog_desktop",
+  "main": "main.js",
+  "scripts": {
+    "ng": "ng",
+    "serve": "ionic serve",
+    "start": "electron .",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "serve-electron": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.gergoeszabo.electron_monolog",
+    "win": {
+      "target": "nsis"
+    },
+    "files": [
+      "main.js",
+      "www/**/*",
+      "node_modules/**/*",
+      "electron/backend/*"
+    ]
+  },
+  "dependencies": {
+    "@angular/core": "16.1.8",
+    "@angular/router": "16.1.8",
+    "@ionic/cli": "latest",
+    "electron": "25.4.0"
+  },
+  "devDependencies": {
+    "electron-builder": "24.6.3",
+    "electron-packager": "^17.1.1",
+    "formidable": "latest",
+    "superagent": "7.0.2",
+    "uuid": "7.0.0"
+  }
+}

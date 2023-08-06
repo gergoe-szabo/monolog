@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ filename }}</ion-title>  <!-- Display the filename -->
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Key Terms -->
+  <ion-list-header>Key Terms</ion-list-header>
+  <ion-text>
+    {{ keyTerms }}
+  </ion-text>
+
+  <!-- Key Phrases -->
+  <ion-list>
+    <ion-list-header>Key Phrases</ion-list-header>
+    <ion-item *ngFor="let phrase of keyPhrases">
+      • {{ phrase }}
+    </ion-item>
+  </ion-list>
+
+  <!-- Transcript (collapsible) -->
+  <ion-list>
+    <ion-list-header (click)="transcriptVisible = !transcriptVisible">
+      Full Transcript
+    </ion-list-header>
+    <ng-container *ngIf="transcriptVisible">
+      <ion-item *ngFor="let sentence of transcript">
+        {{ sentence }}
+      </ion-item>
+    </ng-container>
+  </ion-list>
+
+  <ion-button expand="full" (click)="downloadTranscript()">Download as .txt</ion-button>
+  <ion-button expand="full" routerLink="/home">Back to Home</ion-button>
+</ion-content>
