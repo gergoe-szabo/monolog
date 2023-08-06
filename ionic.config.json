@@ -1,0 +1,7 @@
+{
+  "name": "monoLog_desktop",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

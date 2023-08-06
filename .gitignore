@@ -1,0 +1,7 @@
+.angular/
+.vscode/
+backend/
+monoLog-win32-x64/
+node_modules/
+electron/backend/dist/
+electron/node_modules/

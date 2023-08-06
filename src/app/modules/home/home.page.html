@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>monoLog</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      Upload an audio file
+    </ion-card-header>
+    <ion-card-content>
+      <input type="file" (change)="uploadAudio($event)">
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="full" (click)="processAudio()" [disabled]="!audioUploaded">
+    Process Audio
+  </ion-button>
+</ion-content>
